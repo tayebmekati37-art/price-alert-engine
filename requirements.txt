@@ -1,0 +1,6 @@
+﻿Flask==2.2.3
+Flask-SQLAlchemy==3.0.3
+APScheduler==3.10.1
+requests==2.28.2
+yfinance==0.2.18
+python-dotenv==1.0.0

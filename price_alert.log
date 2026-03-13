@@ -1,0 +1,475 @@
+2026-03-13 02:02:15,839 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:02:15,842 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:02:15,846 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:02:15,850 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:02:15,910 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:02:15,911 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:02:45,849 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:02:45 WAT)" (scheduled at 2026-03-13 02:02:45.839718+01:00)
+2026-03-13 02:02:47,463 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:03:15 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:02:52,856 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:02:52] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-13 02:02:53,537 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:02:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-13 02:03:15,848 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:03:45 WAT)" (scheduled at 2026-03-13 02:03:15.839718+01:00)
+2026-03-13 02:03:15,850 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:03:45 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:03:30,655 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:03:30] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-13 02:03:31,785 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:03:31] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-13 02:03:45,848 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:04:15 WAT)" (scheduled at 2026-03-13 02:03:45.839718+01:00)
+2026-03-13 02:03:45,850 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:04:15 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:04:15,854 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:04:45 WAT)" (scheduled at 2026-03-13 02:04:15.839718+01:00)
+2026-03-13 02:04:15,857 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:04:45 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:04:45,850 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:05:15 WAT)" (scheduled at 2026-03-13 02:04:45.839718+01:00)
+2026-03-13 02:04:45,854 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:05:15 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:05:15,852 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:05:45 WAT)" (scheduled at 2026-03-13 02:05:15.839718+01:00)
+2026-03-13 02:05:15,862 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:05:45 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:05:45,853 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:06:15 WAT)" (scheduled at 2026-03-13 02:05:45.839718+01:00)
+2026-03-13 02:05:45,855 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:06:15 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:06:15,847 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:06:45 WAT)" (scheduled at 2026-03-13 02:06:15.839718+01:00)
+2026-03-13 02:06:15,849 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:06:45 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:06:45,852 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:07:15 WAT)" (scheduled at 2026-03-13 02:06:45.839718+01:00)
+2026-03-13 02:06:45,855 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:07:15 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:07:15,851 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:07:45 WAT)" (scheduled at 2026-03-13 02:07:15.839718+01:00)
+2026-03-13 02:07:16,780 - apscheduler.executors.default - ERROR - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:07:45 WAT)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\Users\Tayeb\Documents\price-alert-engine\app\alert_checker.py", line 12, in check_alerts
+    with current_app.app_context():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Tayeb\Documents\price-alert-engine\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2026-03-13 02:07:22,618 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:10:12,696 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:10:12,697 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:10:12,697 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:10:12,698 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:10:12,745 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:10:12,745 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:10:23,041 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:10:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-13 02:10:42,702 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:10:42 WAT)" (scheduled at 2026-03-13 02:10:42.696244+01:00)
+2026-03-13 02:11:12,702 - apscheduler.scheduler - WARNING - Execution of job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:11:12 WAT)" skipped: maximum number of running instances reached (1)
+2026-03-13 02:11:36,191 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:11:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-13 02:12:15,518 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:12:15,519 - apscheduler.scheduler - WARNING - Execution of job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:11:42 WAT)" skipped: maximum number of running instances reached (1)
+2026-03-13 02:12:15,520 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:11:42 WAT)" executed successfully
+2026-03-13 02:12:15,938 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:15] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-13 02:12:16,009 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:16] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-13 02:12:16,160 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:16] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=INTiMGEalSpYrwZ6Y1uZ HTTP/1.1" 200 -
+2026-03-13 02:12:16,328 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-13 02:12:38,093 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-13 02:12:38,154 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:38] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:12:38,177 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:38] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:12:38,223 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:38] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=INTiMGEalSpYrwZ6Y1uZ HTTP/1.1[0m" 304 -
+2026-03-13 02:12:41,976 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-13 02:12:42,038 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:12:42,053 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:42] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:12:42,070 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=INTiMGEalSpYrwZ6Y1uZ HTTP/1.1[0m" 304 -
+2026-03-13 02:12:42,706 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:13:12 WAT)" (scheduled at 2026-03-13 02:12:42.696244+01:00)
+2026-03-13 02:12:42,708 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:12:42,709 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:13:12 WAT)" executed successfully
+2026-03-13 02:12:44,700 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-13 02:12:44,756 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:44] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:12:44,775 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:44] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:12:44,820 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:44] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=INTiMGEalSpYrwZ6Y1uZ HTTP/1.1[0m" 304 -
+2026-03-13 02:12:44,956 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:12:44] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-13 02:13:12,708 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:13:42 WAT)" (scheduled at 2026-03-13 02:13:12.696244+01:00)
+2026-03-13 02:13:12,710 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:13:12,711 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:13:42 WAT)" executed successfully
+2026-03-13 02:13:16,866 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:17:04,084 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:17:04,086 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:17:04,093 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:17:04,095 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:17:04,189 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:17:04,189 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:17:11,577 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:11] "GET / HTTP/1.1" 200 -
+2026-03-13 02:17:25,824 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:25] "[35m[1mGET /alerts/create HTTP/1.1[0m" 500 -
+2026-03-13 02:17:26,091 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:26] "GET /alerts/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-13 02:17:26,094 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:26] "GET /alerts/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-13 02:17:26,173 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:26] "GET /alerts/create?__debugger__=yes&cmd=resource&f=console.png&s=4pa5MZp7aoaxWl2QeTZj HTTP/1.1" 200 -
+2026-03-13 02:17:26,289 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:26] "GET /alerts/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-13 02:17:31,545 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:31] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:17:34,100 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:17:34 WAT)" (scheduled at 2026-03-13 02:17:34.084368+01:00)
+2026-03-13 02:17:34,105 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:17:34,106 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:18:04 WAT)" executed successfully
+2026-03-13 02:17:35,099 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:35] "[35m[1mGET /alerts/create HTTP/1.1[0m" 500 -
+2026-03-13 02:17:35,167 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:35] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:17:35,176 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:35] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:17:35,224 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:17:35] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=console.png&s=4pa5MZp7aoaxWl2QeTZj HTTP/1.1[0m" 304 -
+2026-03-13 02:18:04,094 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:18:34 WAT)" (scheduled at 2026-03-13 02:18:04.084368+01:00)
+2026-03-13 02:18:04,100 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:18:04,101 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:18:34 WAT)" executed successfully
+2026-03-13 02:18:34,096 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:19:04 WAT)" (scheduled at 2026-03-13 02:18:34.084368+01:00)
+2026-03-13 02:18:34,099 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:18:34,100 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:19:04 WAT)" executed successfully
+2026-03-13 02:19:04,092 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:19:34 WAT)" (scheduled at 2026-03-13 02:19:04.084368+01:00)
+2026-03-13 02:19:04,095 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:19:04,098 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:19:34 WAT)" executed successfully
+2026-03-13 02:19:34,090 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:20:04 WAT)" (scheduled at 2026-03-13 02:19:34.084368+01:00)
+2026-03-13 02:19:34,092 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:19:34,094 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:20:04 WAT)" executed successfully
+2026-03-13 02:20:04,087 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:20:34 WAT)" (scheduled at 2026-03-13 02:20:04.084368+01:00)
+2026-03-13 02:20:04,088 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:20:04,090 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:20:34 WAT)" executed successfully
+2026-03-13 02:20:34,100 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:21:04 WAT)" (scheduled at 2026-03-13 02:20:34.084368+01:00)
+2026-03-13 02:20:34,101 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:20:34,103 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:21:04 WAT)" executed successfully
+2026-03-13 02:21:04,093 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:21:34 WAT)" (scheduled at 2026-03-13 02:21:04.084368+01:00)
+2026-03-13 02:21:04,096 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:21:04,097 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:21:34 WAT)" executed successfully
+2026-03-13 02:21:34,088 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:22:04 WAT)" (scheduled at 2026-03-13 02:21:34.084368+01:00)
+2026-03-13 02:21:34,090 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:21:34,091 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:22:04 WAT)" executed successfully
+2026-03-13 02:22:04,088 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:22:34 WAT)" (scheduled at 2026-03-13 02:22:04.084368+01:00)
+2026-03-13 02:22:04,090 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:22:04,090 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:22:34 WAT)" executed successfully
+2026-03-13 02:22:22,419 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:23:42,108 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:23:42,109 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:23:42,110 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:23:42,111 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:23:42,157 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:23:42,158 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:23:44,958 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:44] "[35m[1mGET /alerts/create HTTP/1.1[0m" 500 -
+2026-03-13 02:23:45,297 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:45] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:23:45,330 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:45] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:23:45,386 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:45] "GET /alerts/create?__debugger__=yes&cmd=resource&f=console.png&s=IbiO1CdpSpsJ1CxZ5aMN HTTP/1.1" 200 -
+2026-03-13 02:23:45,625 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:45] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-13 02:23:47,745 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:47] "[35m[1mGET /alerts/create HTTP/1.1[0m" 500 -
+2026-03-13 02:23:47,832 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:47] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:23:47,859 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:47] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:23:47,983 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:47] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=console.png&s=IbiO1CdpSpsJ1CxZ5aMN HTTP/1.1[0m" 304 -
+2026-03-13 02:23:48,083 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:48] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-03-13 02:23:57,348 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:57] "[35m[1mGET /alerts/create HTTP/1.1[0m" 500 -
+2026-03-13 02:23:57,429 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:57] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-13 02:23:57,453 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:57] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-13 02:23:57,492 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:23:57] "[36mGET /alerts/create?__debugger__=yes&cmd=resource&f=console.png&s=IbiO1CdpSpsJ1CxZ5aMN HTTP/1.1[0m" 304 -
+2026-03-13 02:24:12,124 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:24:12 WAT)" (scheduled at 2026-03-13 02:24:12.108140+01:00)
+2026-03-13 02:24:12,155 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:24:12,156 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:24:42 WAT)" executed successfully
+2026-03-13 02:24:42,118 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:25:12 WAT)" (scheduled at 2026-03-13 02:24:42.108140+01:00)
+2026-03-13 02:24:42,216 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:24:42,217 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:25:12 WAT)" executed successfully
+2026-03-13 02:24:42,603 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:25:58,323 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:25:58,324 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:25:58,324 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:25:58,326 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:25:58,358 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:25:58,358 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:26:01,387 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:01] "GET /alerts/create HTTP/1.1" 200 -
+2026-03-13 02:26:28,335 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:26:28 WAT)" (scheduled at 2026-03-13 02:26:28.323447+01:00)
+2026-03-13 02:26:28,362 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:26:28,363 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:26:58 WAT)" executed successfully
+2026-03-13 02:26:39,283 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:39] "[32mPOST /alerts/create HTTP/1.1[0m" 302 -
+2026-03-13 02:26:39,348 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:39] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:26:43,492 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:43] "GET / HTTP/1.1" 200 -
+2026-03-13 02:26:45,124 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:45] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:26:47,864 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:47] "GET / HTTP/1.1" 200 -
+2026-03-13 02:26:49,398 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:49] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:26:52,726 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:52] "GET / HTTP/1.1" 200 -
+2026-03-13 02:26:58,330 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:27:28 WAT)" (scheduled at 2026-03-13 02:26:58.323447+01:00)
+2026-03-13 02:26:58,332 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:26:59,317 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:26:59,327 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:26:59,328 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:27:28 WAT)" executed successfully
+2026-03-13 02:26:59,830 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:26:59] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:27:03,472 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:27:03] "GET / HTTP/1.1" 200 -
+2026-03-13 02:27:04,301 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:27:04] "GET / HTTP/1.1" 200 -
+2026-03-13 02:27:05,236 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:27:05] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:27:09,086 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:27:09] "GET / HTTP/1.1" 200 -
+2026-03-13 02:27:28,334 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:27:58 WAT)" (scheduled at 2026-03-13 02:27:28.323447+01:00)
+2026-03-13 02:27:28,336 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:27:29,432 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:27:29,435 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:27:29,437 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:27:58 WAT)" executed successfully
+2026-03-13 02:27:58,326 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:28:28 WAT)" (scheduled at 2026-03-13 02:27:58.323447+01:00)
+2026-03-13 02:27:58,327 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:27:59,002 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:27:59,008 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:27:59,011 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:28:28 WAT)" executed successfully
+2026-03-13 02:28:28,372 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:28:28 WAT)" (scheduled at 2026-03-13 02:28:28.323447+01:00)
+2026-03-13 02:28:28,395 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:28:29,414 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:28:29,417 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:28:29,419 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:28:58 WAT)" executed successfully
+2026-03-13 02:28:58,340 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:29:28 WAT)" (scheduled at 2026-03-13 02:28:58.323447+01:00)
+2026-03-13 02:28:58,344 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:28:58,963 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:28:58,966 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:28:58,970 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:29:28 WAT)" executed successfully
+2026-03-13 02:28:58,971 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:30:59,463 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:30:59,464 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:30:59,466 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:30:59,471 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:30:59,515 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:30:59,516 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:31:06,687 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:06] "GET / HTTP/1.1" 200 -
+2026-03-13 02:31:08,546 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:08] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:11,467 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:11] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:12,096 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:12] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:12,368 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:12] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:13,409 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:13] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:17,170 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:31:17] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:31:29,470 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:31:29 WAT)" (scheduled at 2026-03-13 02:31:29.462997+01:00)
+2026-03-13 02:31:29,479 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:31:30,281 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:31:30,285 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:31:30,286 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:31:59 WAT)" executed successfully
+2026-03-13 02:31:59,468 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:32:29 WAT)" (scheduled at 2026-03-13 02:31:59.462997+01:00)
+2026-03-13 02:31:59,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:32:00,090 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:32:00,093 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:32:00,098 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:32:29 WAT)" executed successfully
+2026-03-13 02:32:29,468 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:32:59 WAT)" (scheduled at 2026-03-13 02:32:29.462997+01:00)
+2026-03-13 02:32:29,471 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:32:40,276 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:32:40,276 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:32:40,280 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:32:59 WAT)" executed successfully
+2026-03-13 02:32:59,485 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:33:29 WAT)" (scheduled at 2026-03-13 02:32:59.462997+01:00)
+2026-03-13 02:32:59,496 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:33:00,175 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:33:00,178 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:33:00,180 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:33:29 WAT)" executed successfully
+2026-03-13 02:33:29,466 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:33:59 WAT)" (scheduled at 2026-03-13 02:33:29.462997+01:00)
+2026-03-13 02:33:29,468 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:33:30,261 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:33:30,265 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:33:30,268 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:33:59 WAT)" executed successfully
+2026-03-13 02:33:59,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:34:29 WAT)" (scheduled at 2026-03-13 02:33:59.462997+01:00)
+2026-03-13 02:33:59,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:34:00,133 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:34:00,136 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:34:00,140 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:34:29 WAT)" executed successfully
+2026-03-13 02:34:29,468 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:34:59 WAT)" (scheduled at 2026-03-13 02:34:29.462997+01:00)
+2026-03-13 02:34:29,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:34:40,252 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:34:40,253 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:34:40,262 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:34:59 WAT)" executed successfully
+2026-03-13 02:34:59,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:35:29 WAT)" (scheduled at 2026-03-13 02:34:59.462997+01:00)
+2026-03-13 02:34:59,469 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:35:00,039 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:35:00,042 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:35:00,043 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:35:29 WAT)" executed successfully
+2026-03-13 02:35:29,464 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:35:59 WAT)" (scheduled at 2026-03-13 02:35:29.462997+01:00)
+2026-03-13 02:35:29,468 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:35:30,261 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:35:30,266 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:35:30,270 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:35:59 WAT)" executed successfully
+2026-03-13 02:35:59,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:36:29 WAT)" (scheduled at 2026-03-13 02:35:59.462997+01:00)
+2026-03-13 02:35:59,469 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:36:00,346 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:36:00,350 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:36:00,352 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:36:29 WAT)" executed successfully
+2026-03-13 02:36:29,469 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:36:59 WAT)" (scheduled at 2026-03-13 02:36:29.462997+01:00)
+2026-03-13 02:36:29,472 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:36:30,051 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:36:30,055 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:36:30,059 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:36:59 WAT)" executed successfully
+2026-03-13 02:36:59,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:37:29 WAT)" (scheduled at 2026-03-13 02:36:59.462997+01:00)
+2026-03-13 02:36:59,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:37:00,244 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:37:00,246 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:37:00,249 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:37:29 WAT)" executed successfully
+2026-03-13 02:37:29,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:37:59 WAT)" (scheduled at 2026-03-13 02:37:29.462997+01:00)
+2026-03-13 02:37:29,473 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:37:30,250 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:37:30,256 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:37:30,262 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:37:59 WAT)" executed successfully
+2026-03-13 02:37:59,468 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:38:29 WAT)" (scheduled at 2026-03-13 02:37:59.462997+01:00)
+2026-03-13 02:37:59,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:38:00,064 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:38:00,068 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:38:00,071 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:38:29 WAT)" executed successfully
+2026-03-13 02:38:02,242 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:38:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-13 02:38:29,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:38:59 WAT)" (scheduled at 2026-03-13 02:38:29.462997+01:00)
+2026-03-13 02:38:29,470 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:38:30,364 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:38:30,367 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:38:30,369 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:38:59 WAT)" executed successfully
+2026-03-13 02:38:59,474 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:39:29 WAT)" (scheduled at 2026-03-13 02:38:59.462997+01:00)
+2026-03-13 02:38:59,477 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:39:00,248 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:39:00,252 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:39:00,256 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:39:29 WAT)" executed successfully
+2026-03-13 02:39:28,625 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:39:28] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:39:29,467 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:39:59 WAT)" (scheduled at 2026-03-13 02:39:29.462997+01:00)
+2026-03-13 02:39:29,472 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:39:30,116 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:39:30,119 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:39:30,122 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:39:59 WAT)" executed successfully
+2026-03-13 02:39:59,466 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:40:29 WAT)" (scheduled at 2026-03-13 02:39:59.462997+01:00)
+2026-03-13 02:39:59,468 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:40:10,313 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:40:10,314 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:40:10,317 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:40:29 WAT)" executed successfully
+2026-03-13 02:40:29,465 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:40:59 WAT)" (scheduled at 2026-03-13 02:40:29.462997+01:00)
+2026-03-13 02:40:29,468 - app.alert_checker - INFO - Checking 1 alerts
+2026-03-13 02:40:30,089 - app.price_fetcher - ERROR - Symbol BTC not found in CoinGecko response
+2026-03-13 02:40:30,093 - app.alert_checker - WARNING - Could not fetch price for BTC (crypto)
+2026-03-13 02:40:30,094 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:40:59 WAT)" executed successfully
+2026-03-13 02:40:35,225 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-13 02:41:53,366 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-13 02:41:53,367 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-13 02:41:53,367 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-13 02:41:53,368 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-13 02:41:53,408 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-13 02:41:53,409 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-13 02:41:58,307 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:41:58] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:42:05,293 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:42:05] "[32mPOST /alerts/1/delete HTTP/1.1[0m" 302 -
+2026-03-13 02:42:05,305 - werkzeug - INFO - 127.0.0.1 - - [13/Mar/2026 02:42:05] "GET /alerts HTTP/1.1" 200 -
+2026-03-13 02:42:23,374 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:42:23 WAT)" (scheduled at 2026-03-13 02:42:23.366502+01:00)
+2026-03-13 02:42:23,378 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:42:23,379 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:42:53 WAT)" executed successfully
+2026-03-13 02:42:53,368 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:43:23 WAT)" (scheduled at 2026-03-13 02:42:53.366502+01:00)
+2026-03-13 02:42:53,370 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-13 02:42:53,372 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:43:23 WAT)" executed successfully
+2026-03-13 02:42:57,104 - apscheduler.scheduler - INFO - Scheduler has been shut down

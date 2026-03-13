@@ -1,0 +1,12 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to PriceAlertEngine</h1>
+    <p class="lead">Real-time price alerts for cryptocurrencies and stocks.</p>
+    <hr class="my-4">
+    <p>Total alerts: {{ total }} | Active alerts: {{ active }}</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('main.create_alert') }}" role="button">Create New Alert</a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('main.list_alerts') }}" role="button">View Alerts</a>
+</div>
+{% endblock %}

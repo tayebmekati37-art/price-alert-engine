@@ -1,0 +1,49 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<h2>Your Alerts</h2>
+{% if alerts %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Symbol</th>
+                <th>Type</th>
+                <th>Condition</th>
+                <th>Threshold</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Last Notified</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alert in alerts %}
+            <tr>
+                <td>{{ alert.id }}</td>
+                <td>{{ alert.asset_symbol }}</td>
+                <td>{{ alert.asset_type }}</td>
+                <td>{{ alert.condition }}</td>
+                <td>{{ alert.threshold }}</td>
+                <td>{{ alert.email }}</td>
+                <td>{% if alert.active %}Active{% else %}Inactive{% endif %}</td>
+                <td>{% if alert.last_notified %}{{ alert.last_notified.strftime('%Y-%m-%d %H:%M') }}{% else %}Never{% endif %}</td>
+                <td>
+                    {% if alert.active %}
+                    <form action="{{ url_for('main.delete_alert', alert_id=alert.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Deactivate this alert?')">Deactivate</button>
+                    </form>
+                    {% else %}
+                    <form action="{{ url_for('main.activate_alert', alert_id=alert.id) }}" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-sm btn-success">Activate</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No alerts yet. <a href="{{ url_for('main.create_alert') }}">Create one</a>.</p>
+{% endif %}
+{% endblock %}
