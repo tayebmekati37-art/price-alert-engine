@@ -473,3 +473,45 @@ with app.app_context(). See the documentation for more information.
 2026-03-13 02:42:53,370 - app.alert_checker - INFO - Checking 0 alerts
 2026-03-13 02:42:53,372 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-13 02:43:23 WAT)" executed successfully
 2026-03-13 02:42:57,104 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-03-26 00:27:51,354 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-26 00:27:51,355 - apscheduler.scheduler - INFO - Added job "Check price alerts" to job store "default"
+2026-03-26 00:27:51,360 - apscheduler.scheduler - INFO - Scheduler started
+2026-03-26 00:27:51,367 - app.scheduler - INFO - Scheduler started, checking every 30 seconds
+2026-03-26 00:27:51,444 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-26 00:27:51,446 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-26 00:28:21,359 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:28:21 WAT)" (scheduled at 2026-03-26 00:28:21.354003+01:00)
+2026-03-26 00:28:21,407 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:28:21,407 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:28:51 WAT)" executed successfully
+2026-03-26 00:28:31,653 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:28:31] "GET / HTTP/1.1" 200 -
+2026-03-26 00:28:51,356 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:29:21 WAT)" (scheduled at 2026-03-26 00:28:51.354003+01:00)
+2026-03-26 00:28:51,359 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:28:51,366 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:29:21 WAT)" executed successfully
+2026-03-26 00:29:21,356 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:29:51 WAT)" (scheduled at 2026-03-26 00:29:21.354003+01:00)
+2026-03-26 00:29:21,358 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:29:21,366 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:29:51 WAT)" executed successfully
+2026-03-26 00:29:51,371 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:30:21 WAT)" (scheduled at 2026-03-26 00:29:51.354003+01:00)
+2026-03-26 00:29:51,374 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:29:51,383 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:30:21 WAT)" executed successfully
+2026-03-26 00:30:21,358 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:30:51 WAT)" (scheduled at 2026-03-26 00:30:21.354003+01:00)
+2026-03-26 00:30:21,362 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:30:21,365 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:30:51 WAT)" executed successfully
+2026-03-26 00:30:35,589 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:30:35] "GET / HTTP/1.1" 200 -
+2026-03-26 00:30:41,830 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:30:41] "GET /alerts HTTP/1.1" 200 -
+2026-03-26 00:30:51,369 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:31:21 WAT)" (scheduled at 2026-03-26 00:30:51.354003+01:00)
+2026-03-26 00:30:51,371 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:30:51,379 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:31:21 WAT)" executed successfully
+2026-03-26 00:31:07,973 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:31:07] "GET /alerts/create HTTP/1.1" 200 -
+2026-03-26 00:31:21,367 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:31:51 WAT)" (scheduled at 2026-03-26 00:31:21.354003+01:00)
+2026-03-26 00:31:21,369 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:31:21,376 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:31:51 WAT)" executed successfully
+2026-03-26 00:31:51,359 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:32:21 WAT)" (scheduled at 2026-03-26 00:31:51.354003+01:00)
+2026-03-26 00:31:51,360 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:31:51,369 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:32:21 WAT)" executed successfully
+2026-03-26 00:32:02,416 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:32:02] "GET / HTTP/1.1" 200 -
+2026-03-26 00:32:05,058 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:32:05] "GET /alerts HTTP/1.1" 200 -
+2026-03-26 00:32:06,506 - werkzeug - INFO - 127.0.0.1 - - [26/Mar/2026 00:32:06] "GET / HTTP/1.1" 200 -
+2026-03-26 00:32:21,369 - apscheduler.executors.default - INFO - Running job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:32:51 WAT)" (scheduled at 2026-03-26 00:32:21.354003+01:00)
+2026-03-26 00:32:21,403 - app.alert_checker - INFO - Checking 0 alerts
+2026-03-26 00:32:21,409 - apscheduler.executors.default - INFO - Job "Check price alerts (trigger: interval[0:00:30], next run at: 2026-03-26 00:32:51 WAT)" executed successfully
+2026-03-26 00:32:34,997 - apscheduler.scheduler - INFO - Scheduler has been shut down
