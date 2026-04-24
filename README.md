@@ -20,7 +20,7 @@
 - 🚀 **Real‑time Alerts** – Uses APScheduler to check prices every minute.
 - 📧 **Email Notifications** – Sends emails when an alert triggers.
 - 📈 **Price Data** – Fetches current prices from CoinGecko (crypto) and Alpha Vantage (stocks).
-- 🖥️ **Web Interface** – Add, edit, and delete alerts via a clean Bootstrap UI.
+- 🖥️ **Web Interface** – Add, edit, and delete alerts with a clean Bootstrap UI.
 
 ---
 
